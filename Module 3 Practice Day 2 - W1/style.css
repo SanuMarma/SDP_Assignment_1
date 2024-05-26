@@ -1,0 +1,303 @@
+.body{
+  font-family: Arial, Helvetica, sans-serif;
+  font-optical-sizing: auto;
+}
+
+.buttons{
+  background-color: #fb4f4c;
+  border: none;
+  padding: 10px 25px;
+  color:white
+}
+
+.buttonbody{
+  width: 200px;
+}
+
+.primarytext{
+  color: #fb4f4c;
+  font-weight: bold;
+}
+
+.imgdiv{
+    height: 600px;
+    border-radius: 20px;
+    overflow-y: hidden;
+}
+
+.meetBox{
+    position: absolute;
+    width: 550px;
+    bottom: 25px;
+    right: 35px;
+    z-index: 10;
+}
+
+.meetBox > p{
+    color: rgb(220, 220, 220);
+}
+
+.section{
+    margin-top: 100px;
+}
+.taxtHeading{
+    border-top: 2px solid #e1e1e1 ;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 2px solid #e1e1e1;
+    border-style: dashed;
+    padding: 20px 0;
+}
+
+.taxtHeading > p{
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #807c7c;
+}
+
+
+/* progress bar  */
+.single-chart > h5{
+  position: relative;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+  letter-spacing: 1px;
+
+}
+.single-chart >p{
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #807c7c;
+  margin-block-end: 0%;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+  .single-chart {
+    width: 180%;
+    justify-content: space-around ;
+  }
+  
+  .circular-chart {
+    display: block;
+    margin: 10px auto;
+    max-width: 50%;
+    max-height: 250px;
+  }
+  
+  .circle-bg {
+    fill: none;
+    stroke: #eee;
+    stroke-width: 3.8;
+  }
+  
+  .circle {
+    fill: none;
+    stroke-width: 2.8;
+    stroke-linecap: round;
+    animation: progress 1s ease-out forwards;
+  }
+  
+  @keyframes progress {
+    0% {
+      stroke-dasharray: 0 100;
+    }
+  }
+  
+  .circular-chart.red .circle {
+    stroke: #FF4240;
+  }
+  
+  .circular-chart.yellow .circle {
+    stroke: #FFB546;
+  }
+  
+  .circular-chart.green .circle {
+    stroke: #4CC790;
+  }
+  
+  .circular-chart.blue .circle {
+    stroke: #3c9ee5;
+  }
+  
+  .percentage {
+    fill: #666;
+    font-family: sans-serif;
+    font-size: 0.5em;
+    text-anchor: middle;
+  }
+
+.bgColor{
+    background-color: rgba(48, 45, 45, 0.637);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.Card{
+  width: 49%;
+}
+.CardContent{
+    margin-left: 30px;
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.Card2{
+    overflow: hidden;
+}
+
+/* Contact card */
+
+.accordion-body >p{
+  text-align: center;
+  margin-top: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #807c7c;
+}
+
+ .contactleft-content{
+    width: 30%;
+ }
+ .contactright-content{
+    width: 70%;
+    padding: 0 40px;
+ } 
+
+ .contactCard{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #bced6d43;
+ }
+ .contactCard2{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #fddd5f3e;
+ }
+
+ .contactCard3{
+    padding: 30px;
+    border-radius: 20px;
+    background-color: #629cf32c;
+ }
+ .contactCardTitle{
+    margin-top: 20px;
+    margin-bottom: 0px;
+ }
+ .contactCardDetail{
+    margin-top: 5px;
+    font-weight: 800;
+ }
+
+.field{
+  width: 50%;
+}
+.labels{
+  font-weight: bold;
+}
+.labelinput{
+  margin-top: 6px;
+  padding: 10px 20px;
+  width: 100%;
+  outline: none;
+  border-radius: 5px;
+  background-color: #f7f3f3f3;
+}
+.labelinput::placeholder{
+  color: #a19d9d
+}
+
+.textarea{
+  height: 370px;
+}
+
+.social-section{
+  border-radius: 10px;
+  background-color: #e9e9e9;
+  padding: 40px ;
+  text-align: center;
+}
+.social-section > h1{
+    font-weight: bold;
+    font-size: 20px;
+}
+.social-icons{
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  justify-content: center;
+  font-size: 20px;
+  gap: 30px;
+}
+
+.footer{
+  background-color: #131318;
+  color: #b7b7b7;
+}
+
+.listmenu{
+  padding: 0;
+  list-style-type: none;
+  text-align: left;
+}
+.listmenu li{
+  text-align: left;
+}
+
+  /* for responsive */
+ 
+@media only screen and (min-width:320px) and (max-width:767px){
+    .container{
+      max-width: 100vw;
+    }
+    .Card{
+      width: 100%;
+    }
+    .CardContent{
+      height: 80%;
+    }
+    .cardimage{
+        width: 100%;
+        height: 100%;
+    }
+    .flex-wrapper{
+        flex-direction: column;
+    }
+    .single-chart{
+        width: 100%;
+    }
+    .tx{
+      text-align: center;
+    }
+    .listmenu{
+      padding: 0;
+      list-style-type: none;
+      text-align: center;
+    }
+    .listmenu li{
+      text-align: center;
+    }
+    .meetBox{
+      width: 280px;
+    }
+    .contactleft-content{
+      width: 100%;
+    }
+    .contactright-content{
+      width: 100%;
+    }
+    .field{
+      width: 100%;
+    }
+}
+
