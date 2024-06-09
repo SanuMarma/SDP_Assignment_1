@@ -1,1 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 2</title>
+    
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <header>
+        <nav class="navbar">
+            <section class="nav">
+                <h2 class="logoName">PlayersTeam</h2>
+                <div class="navitem">
+                    <p>Home</p>
+                    <p>About</p>
+                    <p>Contact</p>
+                    <p>Blog</p>
+                </div>
+            </section>
+        </nav>
+    </header>
+
+    <div class="main-container">
+        <section class="search-section">
+            <input id="inputValue" type="text" placeholder="search meal by name">
+            <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
+        </section>
+
+
+        <section class="loadplayers">
+            <div id="playercard" class="playercard">
+          
+            </div>
+
+            <div class="selectedPlayers">
+                <h1 class="list">Selected Player List</h1>
+                <div class="addPlayer">
+                    <h4 class="primary-color ">ADD Players:</h4>
+                    <h3 id="counting" class="primary-color counting">0</h3>
+                </div>
+
+                <div id="playersList" class="playersList">
+                    <p class="primary-color">No Player Selected</p>
+                    
+                </div>
+            </div>
+
+        </section>
+
+        <div id="modalcard" class="modalcard">
+           
+        </div>
+        <div onclick="closeModal()" id="modal" class="modal">
+        </div>
+   
+    </div>  
+
+
+</body>
+
+
+<footer class="footer">
+    <section>
+        <h1>PlayersTeam</h1>
+        <p>© 2024 All copyright reserved by Google Mama</p>
+    </section>
+</footer>
+
+  <!-- font awesome cdn -->
+  <script src="https://kit.fontawesome.com/5d73ebcce2.js" crossorigin="anonymous"></script>
+
+<script src="app.js"></script>
+</html>
