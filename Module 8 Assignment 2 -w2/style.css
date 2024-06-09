@@ -1,0 +1,327 @@
+:root{
+    --primary-color: #1d9ba9;
+    --secondary-color: #2484b4;
+    --neutral-color: #148eaa;
+    --default-color: #EEEEEE
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--default-color);
+}
+
+.navbar{
+    background: var(--default-color);
+    padding: 10px 0px;
+    position: fixed;
+    width: 100vw;
+    z-index: 5;
+    top: 2%;
+}
+
+.logoName{
+    font-weight: 700;
+    color: var(--primary-color);
+    /* text-transform: uppercase; */
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 40px;
+}
+.nav > .navitem{
+    display: flex;
+    gap: 30px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s;
+    
+}
+.nav > .navitem > p:hover{
+    color: var(--primary-color);
+}
+
+.main-container{
+    position: relative;
+    padding-top: 40px;
+    min-height: 100vh;
+}
+section{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+.search-section{
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 60px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.search-section > input{
+    width: 60% ;
+    height: 40px;
+    border-radius: 30px;
+    border: 1px solid var(--primary-color);
+    padding: 0px 15px;
+    font-size: 16px;
+    outline: none;
+    color: var(--neutral-color);
+}
+.search-section >button{
+    width: 10%;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--default-color);
+    font-size: 18px;
+    justify-content: center;
+    gap: 8px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.search-section > button > i{
+    font-size: 14px;
+}
+.search-section > button:hover{
+    background-color: var(--neutral-color);
+}
+
+.loadplayers{
+    margin-top: 50px;
+    display: flex;
+    gap: 15px;
+}
+.playercard{
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    flex-wrap: wrap;
+    justify-content: left;
+    gap: 20px;
+    
+}
+.card{
+    border: 3px solid rgb(65, 122, 153);
+    padding: 10px;
+    min-height: 400px;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 10px 10px 20px #1515150e,
+        -10px -10px 20px  rgb(240, 240, 240)
+    ;
+}
+
+.card > img{
+    width: 100%;
+    border-radius: 16px
+}
+
+.content > p{
+    font-size: 15px;
+    margin-top: 10px;
+    text-align: center;
+}
+.content > .name{
+    text-align: center;
+}
+
+.card > .content{
+    padding: 20px 0px;
+    margin-top: -15px;
+}
+
+.content > .moreinfo{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.moreinfo > p{
+    text-align: center;
+    color: var(--neutral-color);
+    background-color: #4a97c427;
+    font-size: 20px;
+    display: flex;
+    gap: 5px;
+    overflow: hidden;
+}
+
+.buttongroup{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+.buttongroup > button{
+    width: 50%;
+    background-color: var(--primary-color);
+    color: var(--default-color);
+    border: 0;
+    padding: 10px 10px;
+    font-size: 16px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.buttongroup > button:hover{
+    background-color: var(--neutral-color);
+}
+
+/* selectedPlayers */
+
+.selectedPlayers{
+    width: 25%;
+    background-color: white;
+    padding: 20px;
+    border-radius: 16px;
+}
+.selectedPlayers > h1{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.addPlayer{
+    border-bottom: 5px solid var(--primary-color);
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.playersList{
+    margin-top: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--primary-color);
+    padding-bottom: 20px;
+}
+.singlePlayer > img{
+    border-radius: 16px;
+    width: 30%;
+    padding: 10px;
+}
+
+.singlePlayer > .details{
+    width: 80%;
+    padding: 10px;
+    margin-left: 30px;
+}
+.singlePlayer > .details > h2{
+    font-size: 18px;
+    color: var(--primary-color);
+}
+
+
+/* modal */
+.modalcontent{
+    display: grid;
+    gap: 20px;
+}
+
+.modal{
+    display: none;
+    z-index: 10px;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    backdrop-filter: blur(3px);
+    background-color: #2484b444;
+    animation: animateModal 0.3s ease-in-out;
+
+}
+.modalcard{
+    display: none;
+    position: fixed;
+    z-index: 100;
+    background-color: white;;
+    width: 800px;
+    top: 10%;
+    left: 35%;
+    padding: 20px;
+    overflow: hidden;
+    animation: animateModal 0.3s ease-in-out;
+}
+
+.modalcontent > img{
+    width: 50%;
+    margin: auto;
+}
+.modaldetail > h1{
+    color: #05344d;
+    text-align: center;
+}
+
+.close{
+    display: flex;
+    justify-content: right;
+}
+
+.close i{
+    font-size: 26px;
+    color: #1d9ba9;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.close i:hover{
+    color: black;
+}
+
+.modalinfo{
+    display: flex;
+    gap: 5px;
+    margin-top: 25px;
+    justify-content: center;
+}
+
+.modalinfo > p > span{
+    font-weight: bold;
+}
+
+.modalinfo > h5{
+    font-size: 16px;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 2px 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    border-radius: 20px;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-right: 25px;
+    align-items: center;
+    font-size: 22px;
+    gap: 20px;
+}
+
+.icons > a{
+    color: var(--neutral-color);
+    transition: all 0.2s;
+}
+.icons > a:hover{
+    color: var(--primary-color);
+}
+
+.footer{
+    padding: 100px;
+    background-color: var(--neutral-color);
+    color: var(--default-color);
+    margin-top: 100px;
+    text-align: center;
+}
